@@ -28,9 +28,7 @@ lienol_pkg_repo="https://github.com/Lienol/openwrt-package"
 openwrt_add_repo="https://github.com/QiuSimons/OpenWrt-Add.git"
 openwrt_node_repo="https://github.com/nxhack/openwrt-node-packages.git"
 openwrt_third_repo="https://github.com/jjm2473/openwrt-third"
-dockerman_repo="https://github.com/lisaac/luci-app-dockerman"
 diskman_repo="https://github.com/lisaac/luci-app-diskman"
-docker_lib_repo="https://github.com/lisaac/luci-lib-docker"
 mosdns_repo="https://github.com/QiuSimons/openwrt-mos"
 ssrp_repo="https://github.com/fw876/helloworld"
 zxlhhyccc_repo="https://github.com/zxlhhyccc/bf-package-master"
@@ -66,9 +64,7 @@ clone_repo $lienol_pkg_repo main Lienol_pkg &
 clone_repo $openwrt_add_repo master OpenWrt-Add &
 clone_repo $openwrt_node_repo master openwrt-node &
 clone_repo $openwrt_third_repo main openwrt-third &
-clone_repo $dockerman_repo master dockerman &
 clone_repo $diskman_repo master diskman &
-clone_repo $docker_lib_repo master docker_lib &
 clone_repo $mosdns_repo master mosdns &
 clone_repo $ssrp_repo main ssrp &
 clone_repo $zxlhhyccc_repo master zxlhhyccc &

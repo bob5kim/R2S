@@ -30,7 +30,6 @@ openwrt_node_repo="https://github.com/nxhack/openwrt-node-packages.git"
 openwrt_third_repo="https://github.com/jjm2473/openwrt-third"
 diskman_repo="https://github.com/lisaac/luci-app-diskman"
 mosdns_repo="https://github.com/QiuSimons/openwrt-mos"
-ssrp_repo="https://github.com/fw876/helloworld"
 zxlhhyccc_repo="https://github.com/zxlhhyccc/bf-package-master"
 linkease_repo="https://github.com/linkease/openwrt-app-actions"
 linkease_pkg_repo="https://github.com/jjm2473/packages"
@@ -66,7 +65,6 @@ clone_repo $openwrt_node_repo master openwrt-node &
 clone_repo $openwrt_third_repo main openwrt-third &
 clone_repo $diskman_repo master diskman &
 clone_repo $mosdns_repo master mosdns &
-clone_repo $ssrp_repo main ssrp &
 clone_repo $zxlhhyccc_repo master zxlhhyccc &
 clone_repo $linkease_repo main linkease &
 clone_repo $linkease_pkg_repo istoreos-21.02 linkease_pkg &

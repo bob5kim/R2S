@@ -288,10 +288,6 @@ cp -rf ../lede_luci/applications/luci-app-netdata ./package/new/luci-app-netdata
 git clone -b master --depth 1 https://github.com/sbwml/OpenAppFilter.git package/new/OpenAppFilter
 # OLED 驱动程序
 git clone -b master --depth 1 https://github.com/NateLol/luci-app-oled.git package/new/luci-app-oled
-# homeproxy
-git clone --single-branch --depth 1 -b dev https://github.com/immortalwrt/homeproxy.git package/new/homeproxy
-rm -rf ./feeds/packages/net/sing-box
-cp -rf ../immortalwrt_pkg/net/sing-box ./feeds/packages/net/sing-box
 # OpenClash
 git clone --single-branch --depth 1 -b master https://github.com/vernesong/OpenClash.git package/new/luci-app-openclash
 # qBittorrent 下载

@@ -43,13 +43,5 @@ CONFIG_PACKAGE_dnsmasq_full_ipset=y
 CONFIG_PACKAGE_dnsmasq_full_nftset=n
 CONFIG_PACKAGE_iptables-mod-fullconenat=y
 ' >>./.config
-rm -rf ./feeds/luci/applications/luci-app-zerotier
-cp -rf ../lede_luci/applications/luci-app-zerotier ./feeds/luci/applications/luci-app-zerotier
-wget -P feeds/luci/applications/luci-app-zerotier/ https://github.com/QiuSimons/OpenWrt-Add/raw/master/move_2_services.sh
-chmod -R 755 ./feeds/luci/applications/luci-app-zerotier/move_2_services.sh
-pushd feeds/luci/applications/luci-app-zerotier
-bash move_2_services.sh
-popd
-ln -sf ../../../feeds/luci/applications/luci-app-zerotier ./package/feeds/luci/luci-app-zerotier
 
 exit 0

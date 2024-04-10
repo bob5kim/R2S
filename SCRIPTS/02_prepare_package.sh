@@ -220,7 +220,6 @@ wget -qO- https://github.com/openwrt/luci/commit/0b5fb915.patch | patch -p1
 popd
 # ChinaDNS
 git clone -b luci --depth 1 https://github.com/QiuSimons/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
-cp -rf ../passwall_pkg/chinadns-ng ./package/new/chinadns-ng
 # CPU 控制相关
 cp -rf ../OpenWrt-Add/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
@@ -295,37 +294,6 @@ rm -rf ./feeds/packages/net/sing-box
 cp -rf ../immortalwrt_pkg/net/sing-box ./feeds/packages/net/sing-box
 # OpenClash
 git clone --single-branch --depth 1 -b master https://github.com/vernesong/OpenClash.git package/new/luci-app-openclash
-# Passwall
-cp -rf ../passwall_luci/luci-app-passwall ./package/new/luci-app-passwall
-wget -P package/new/luci-app-passwall/ https://github.com/QiuSimons/OpenWrt-Add/raw/master/move_2_services.sh
-chmod -R 755 ./package/new/luci-app-passwall/move_2_services.sh
-pushd package/new/luci-app-passwall
-bash move_2_services.sh
-popd
-cp -rf ../passwall_pkg/tcping ./package/new/tcping
-cp -rf ../passwall_pkg/trojan-go ./package/new/trojan-go
-cp -rf ../passwall_pkg/brook ./package/new/brook
-cp -rf ../passwall_pkg/ssocks ./package/new/ssocks
-cp -rf ../passwall_pkg/microsocks ./package/new/microsocks
-cp -rf ../passwall_pkg/dns2socks ./package/new/dns2socks
-cp -rf ../passwall_pkg/ipt2socks ./package/new/ipt2socks
-cp -rf ../passwall_pkg/pdnsd-alt ./package/new/pdnsd-alt
-cp -rf ../OpenWrt-Add/trojan-plus ./package/new/trojan-plus
-cp -rf ../passwall_pkg/xray-plugin ./package/new/xray-plugin
-# Passwall 白名单
-echo '
-teamviewer.com
-epicgames.com
-dangdang.com
-account.synology.com
-ddns.synology.com
-checkip.synology.com
-checkip.dyndns.org
-checkipv6.synology.com
-ntp.aliyun.com
-cn.ntp.org.cn
-ntp.ntsc.ac.cn
-' >>./package/new/luci-app-passwall/root/usr/share/passwall/rules/direct_host
 # qBittorrent 下载
 cp -rf ../lede_luci/applications/luci-app-qbittorrent ./package/new/luci-app-qbittorrent
 cp -rf ../lede_pkg/net/qBittorrent-static ./package/new/qBittorrent-static
@@ -352,7 +320,6 @@ cp -rf ../sbwfw876/shadowsocksr-libev ./package/new/shadowsocksr-libev
 cp -rf ../sbwfw876/simple-obfs ./package/new/simple-obfs
 cp -rf ../sbwfw876/naiveproxy ./package/new/naiveproxy
 cp -rf ../sbwfw876/v2ray-core ./package/new/v2ray-core
-cp -rf ../passwall_pkg/hysteria ./package/new/hysteria
 cp -rf ../sbwfw876/sagernet-core ./package/new/sagernet-core
 rm -rf ./feeds/packages/net/xray-core
 cp -rf ../immortalwrt_pkg/net/xray-core ./feeds/packages/net/xray-core

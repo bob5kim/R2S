@@ -8,8 +8,6 @@ pushd feeds/luci
 patch -Rp1 <../../../PATCH/firewall/luci-app-firewall_add_fullcone_fw4.patch
 patch -p1 <../../../PATCH/firewall/luci-app-firewall_add_fullcone_fw3.patch
 popd
-sed -i 's,iptables-nft,iptables-legacy,g' ./package/new/luci-app-passwall2/Makefile
-sed -i 's,iptables-nft,iptables-legacy,g' ./package/new/luci-app-passwall/Makefile
 sed -i 's,iptables-nft +kmod-nft-fullcone,iptables-mod-fullconenat,g' ./package/new/addition-trans-zh/Makefile
 rm -rf ./feeds/packages/net/miniupnpd
 cp -rf ../immortalwrt_pkg_21/net/miniupnpd ./feeds/packages/net/miniupnpd
